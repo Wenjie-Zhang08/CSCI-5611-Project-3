@@ -14,6 +14,8 @@
 ## Part 3
 * FBRIK (3D)
 * Compare (Included in this File)
+## Note
+2D Version is based on Processing and 3D Version is based on Unity
 
 # Art Contest
 
@@ -28,5 +30,12 @@
 * w or s - Moving camera forward or backward
 * a or d - Moving camera left or right
 
+# Compare between two methods
+## CCD
 
+
+## Fabrik
+
+
+# Discription of Features and Timestamp
 
