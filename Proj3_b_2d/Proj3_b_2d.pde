@@ -8,13 +8,13 @@ float[] humanLen = {100f,100f,50f,25f};
 //float[] startAngles = {0.3,0.3,0.3,0.3};
 float[] accelerations = {0.05,0.05,0.1,0.2};
 
-float[] maxAnglesR = {PI/8,PI/2,PI/2,0};
-float[] minAnglesR = {0,0,0,0};
+float[] maxAnglesR = {PI/8,PI/2,PI/2,PI/2};
+float[] minAnglesR = {0,0,0,-PI/2};
 
-float[] maxAnglesL = {PI,0,0,0};
-float[] minAnglesL = {-PI/8 + PI, -PI/2,-PI/2,0};
+float[] maxAnglesL = {PI,0,0,PI/2};
+float[] minAnglesL = {-PI/8 + PI, -PI/2,-PI/2,-PI/2};
 
-boolean[] angleB = {true,true,true,false};
+boolean[] angleB = {true,true,true,true};
 
 
 Vec2[] center = {new Vec2(200,200),new Vec2(400,300),new Vec2(600,100)};
@@ -64,4 +64,27 @@ void keyPressed(){
     if(keyCode == LEFT) center[0].x-= 5;
   if(keyCode == RIGHT) center[0].x+= 5;
   
+}
+
+
+boolean jointLimited = false;
+
+void keyReleased(){
+  if(key == 'm'){
+    if(jointLimited){
+      for(int i = 0; i < arms.length; i ++){
+        arms[i].disableLimits();
+      }
+      jointLimited = false;
+      println("disabled limits");
+    }
+    else{
+      for(int i = 0; i < arms.length; i ++){
+        arms[i].enableLimits();
+      }
+      jointLimited = true;
+           println("enabled limits");
+    }
+    
+  }
 }

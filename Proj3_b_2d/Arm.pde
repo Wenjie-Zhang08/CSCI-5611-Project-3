@@ -77,6 +77,13 @@ class Arm{
    }
  }
    
+    public void enableLimits(){
+   for(int i = 0; i < angleBound.length; i++){
+     angleBound[i] = true;
+   }
+ }
+   
+   
   public void fk(){
     for (int i = 1; i < numJoints; i ++){
       // 0 is root
@@ -164,12 +171,13 @@ class Arm{
       
       fk();
     }
+    /*
     for(int i = 0; i < angles.length ; i++){
       
      print(angles[i] + " ") ;
     }
     println();
-    
+    */
     /*
     
     //Update wrist joint
