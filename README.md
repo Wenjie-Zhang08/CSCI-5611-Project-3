@@ -29,6 +29,7 @@ https://youtu.be/xki90C4lUwQ
 ## 2D Version
 * Mouse - Target
 * Arrow keys - Moving the **red obstacle** in the scene
+* m - turn joint limit on/off
 ## 3D Version
 * Mouse Drag - Moving Goals
 * Arrow Keys - Change camera rotation angles
